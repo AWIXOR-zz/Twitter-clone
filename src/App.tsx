@@ -1,13 +1,17 @@
 import ThemeProvider from "providers/ThemeProvider";
+import { BrowserRouter } from "react-router-dom";
+import AppRoutes from "routes";
 import Layout from "ui/Layout";
 import "./App.css";
 
 function App() {
   return (
     <ThemeProvider>
-      <Layout>
-        <div className="App">Hello</div>
-      </Layout>
+      <BrowserRouter>
+        <Layout>
+          <AppRoutes />
+        </Layout>
+      </BrowserRouter>
     </ThemeProvider>
   );
 }
