@@ -1,11 +1,11 @@
-import './App.css';
+import ThemeProvider from "providers/ThemeProvider";
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-   
-   Hello
-    </div>
+    <ThemeProvider>
+      <div className="App">Hello</div>
+    </ThemeProvider>
   );
 }
 
