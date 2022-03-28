@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-import useMedia from "./useMedia";
-
+import useMedia from "hooks/useMedia";
 
 const useDarkMode = () => {
   const [theme, setTheme] = useState("light");
@@ -14,11 +13,13 @@ const useDarkMode = () => {
       setTheme("light");
     }
   };
+
   const prefersDarkMode = useMedia(
-    ["(prefers-color-scheme: dark)"],
+    ["(prefers-color-schema:dark)"],
     [true],
     false
   );
+
   useEffect(() => {
     const localTheme = window.localStorage.getItem("theme");
     if (localTheme) {
@@ -29,7 +30,7 @@ const useDarkMode = () => {
       setTheme("light");
     }
   }, [prefersDarkMode]);
+
   return { theme, toggleTheme };
 };
-
 export default useDarkMode;
