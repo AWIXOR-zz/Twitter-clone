@@ -1,12 +1,11 @@
+import SignIn from "features/Auth/modules";
 import { Routes, Route } from "react-router-dom";
 import ProtectedRoute from "./ProtectedRoute";
 
 const Profile = () => {
   return <h2>This is Profile</h2>;
 };
-const SignIn = () => {
-  return <h2>This is Sign In</h2>;
-};
+
 
 const AppRoutes = () => (
   <Routes>
